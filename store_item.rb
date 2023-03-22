@@ -16,7 +16,29 @@
 # item2 = { :color => "orange", :price => 15 }
 # item3 = { :color => "brown", :price => 25 }
 
+# class Item1
+#   def initialize(input_type, input_color, input_price)
+#     @type = input_type
+#     @color = input_color
+#     @price = input_price
+#   end
+
+#   def print_info
+#     p "My store sells #{@color} #{@type} for $#{@price}!"
+#   end
+# end
+
+# item1 = Item1.new("tennis balls", "yellow", "5")
+# p item1.print_info
+
 class Item1
+  attr_reader :type
+  attr_writer :type
+  attr_reader :color
+  attr_writer :color
+  attr_reader :price
+  attr_writer :price
+
   def initialize(input_type, input_color, input_price)
     @type = input_type
     @color = input_color
